@@ -3,23 +3,36 @@ import React, { Component } from 'react';
 class Movies extends Component {
 
     state = {
-        movies: ""
+        movies: "",
+        query: ""
     }
 
-    fetchMovies = () => {
-        fetch("http://img.omdbapi.com/?apikey=756da7f2")
+    fetchMovies = (query) => {
+        fetch(`http://www.omdbapi.com/?s=${query}&apikey=2f7ff25f`)
         .then(res => {return res.json()})
-        .then(data => console.log("data", data))
+        .then(data => {this.setState({
+            movies: data
+        })})
     }
 
-    componentDidMount(){
-        this.fetchMovies()
+    componentDidUpdate(){
+        this.fetchMovies(this.state.query)
+    }
+
+    inputHandler = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value 
+        })
     }
 
     render() {
         return (
             <div>
+                <form>
+                    <input name="query" type="text" value={this.state.query} onChange={this.inputHandler}/>
+                </form>
                 Inside Movies component
+        {this.state.movies.map(movie => {return <p>{movie.title}</p>})}
             </div>
         );
     }
