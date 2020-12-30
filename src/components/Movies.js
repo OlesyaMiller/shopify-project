@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
+const key = "khkhkjh"
+
 class Movies extends Component {
 
     state = {
-        movies: "",
+        movies: [],
         query: ""
     }
 
     fetchMovies = (query) => {
         fetch(`http://www.omdbapi.com/?s=${query}&apikey=2f7ff25f`)
         .then(res => {return res.json()})
-        .then(data => {this.setState({
-            movies: data
-        })})
+        .then(data => this.setState({
+            movies: data.Search
+        }))
     }
 
     componentDidUpdate(){
@@ -26,13 +28,16 @@ class Movies extends Component {
     }
 
     render() {
+
+        // if (this.state.movies.length === 0) return null
+
         return (
             <div>
                 <form>
                     <input name="query" type="text" value={this.state.query} onChange={this.inputHandler}/>
                 </form>
                 Inside Movies component
-        {this.state.movies.map(movie => {return <p>{movie.title}</p>})}
+        {this.state.movies && (this.state.movies.map(movie => {return <p>Title:{movie.Title} Year of release: {movie.Year}</p>}))}
             </div>
         );
     }
