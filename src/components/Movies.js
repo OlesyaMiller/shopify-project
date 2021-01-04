@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const key = "khkhkjh"
+const key = "2f7ff25f"
 
 class Movies extends Component {
 
@@ -10,7 +10,7 @@ class Movies extends Component {
     }
 
     fetchMovies = (query) => {
-        fetch(`http://www.omdbapi.com/?s=${query}&apikey=2f7ff25f`)
+        fetch(`http://www.omdbapi.com/?s=${query}&apikey=${key}`)
         .then(res => {return res.json()})
         .then(data => this.setState({
             movies: data.Search
