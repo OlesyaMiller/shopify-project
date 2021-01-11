@@ -6,7 +6,8 @@ class Movies extends Component {
 
     state = {
         movies: [],
-        query: ""
+        query: "",
+        loading: true 
     }
 
     fetchMovies = (query) => {
@@ -17,7 +18,8 @@ class Movies extends Component {
         }))
     }
 
-    componentDidUpdate(){
+    componentDidUpdate(prevProps, prevState){
+    // shouldComponentUpdate(){    
         this.fetchMovies(this.state.query)
     }
 
@@ -36,7 +38,7 @@ class Movies extends Component {
                 <form>
                     <input name="query" type="text" value={this.state.query} onChange={this.inputHandler}/>
                 </form>
-                Inside Movies component
+                Inside Movies component.
         {this.state.movies && (this.state.movies.map(movie => {return <p>Title:{movie.Title} Year of release: {movie.Year}</p>}))}
             </div>
         );
