@@ -5,7 +5,8 @@ class Movies extends Component {
     render() {
         return (
             <div>
-                {this.props.movies && (this.props.movies.map(movie => <Movie movie={movie}/>))} 
+                {this.props.loading === true?<p>Loading...</p>:null}
+                {this.props.movies && (this.props.movies.map(movie => <Movie nominateMovie={this.props.nominateMovie} movie={movie}/>))} 
             </div>
         );
     }
