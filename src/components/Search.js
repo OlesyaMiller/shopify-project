@@ -45,8 +45,6 @@ class Search extends Component {
                     <input name="query" type="text" value={this.state.query} onChange={this.inputHandler}/>
                     <input type="submit" value="Search"/>
                 </form>
-                Inside Search component.
-        {/* {this.state.movies && (this.state.movies.map(movie => {return <p>Title:{movie.Title} Year of release: {movie.Year}</p>}))} */}
             </div>
         );
     }
