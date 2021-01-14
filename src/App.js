@@ -25,7 +25,7 @@ class App extends Component {
   }
 
   nominateMovie = (id) => {
-    this.state.movies.map(movie => {return this.state.selected_movies.push(movie.imdbID === id ? movie : null)})
+    this.state.movies.map(movie => {return this.state.selected_movies.push(movie.imdbID === id ? movie.imdbID : null)})
   }
 
   render() {
