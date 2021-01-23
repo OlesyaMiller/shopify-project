@@ -25,15 +25,26 @@ class App extends Component {
   }
 
   nominateMovie = (id) => {
-    this.state.movies.map(movie => {return this.state.selected_movies.push(movie.imdbID === id ? movie.imdbID : null)})
+    for (let i = 0; i < this.state.movies.length; i++) {
+      let element = this.state.movies[i]
+      if(element.imdbID === id){
+        this.state.selected_movies.push(element)
+        console.log(this.state.selected_movies)
+        // Rerender NominationList here
+      }  
+    }
+    // this.state.movies.map(movie => {
+    //   return this.state.selected_movies.push(movie.imdbID === id ? movie.imdbID : null)
+    // })
   }
+
 
   render() {
     return (
       <div>
         <Search fetchMovies={this.fetchMovies}/>
         <Movies loading={this.state.loading} movies={this.state.movies} nominateMovie={this.nominateMovie}/>
-        <SelectedMovies selectedMovieIds={this.state.selected_movies}/>
+        <SelectedMovies selectedMovies={this.state.selected_movies}/>
       </div>
     )
   }
