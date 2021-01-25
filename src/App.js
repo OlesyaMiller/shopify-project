@@ -28,9 +28,12 @@ class App extends Component {
     for (let i = 0; i < this.state.movies.length; i++) {
       let element = this.state.movies[i]
       if(element.imdbID === id){
-        this.state.selected_movies.push(element)
+        this.setState({
+          selected_movies: [...this.state.selected_movies, element]
+        })
         console.log(this.state.selected_movies)
         // Rerender NominationList here
+        
       }  
     }
     // this.state.movies.map(movie => {

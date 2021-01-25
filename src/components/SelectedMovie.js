@@ -3,7 +3,7 @@ import React from 'react';
 const SelectedMovie = (props) => {
     return (
         <div>
-            {props.content.Title}
+            {props.content.imdbID}
         </div>
     );
 };
