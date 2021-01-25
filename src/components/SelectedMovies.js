@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import SelectedMovie from './SelectedMovie';
+import React, { Component } from 'react'
+import SelectedMovie from './SelectedMovie'
 
 // const key = "2f7ff25f"
 
@@ -23,4 +23,4 @@ class SelectedMovies extends Component {
     }
 }
 
-export default SelectedMovies;
+export default SelectedMovies
