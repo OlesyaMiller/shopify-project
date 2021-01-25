@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const SelectedMovie = (props) => {
     return (
@@ -8,4 +8,4 @@ const SelectedMovie = (props) => {
     );
 };
 
-export default SelectedMovie;
+export default SelectedMovie
