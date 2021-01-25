@@ -1,4 +1,4 @@
-import './App.css';
+import './App.css'
 import Movies from './components/Movies'
 import Search from './components/Search'
 import React, {Component} from 'react'
@@ -53,4 +53,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default App
