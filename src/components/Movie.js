@@ -8,7 +8,7 @@ const Movie = (props) => {
 
     return (
         <div>
-            <p>Title:{props.movie.Title} Year of release: {props.movie.Year}</p>
+            <h2>Title:{props.movie.Title} Year of release: {props.movie.Year}</h2>
             <img src={props.movie.Poster} />
             <p><button onClick={nominateMovie}>Nominate movie</button></p>
         </div>
