@@ -11,9 +11,6 @@ class SelectedMovies extends Component {
             <div>
                 Inside selectedMovies!!!
                 {this.props.selectedMovies.map(movie => {
-                    // return fetch((`http://www.omdbapi.com/?i=${id}&type=movie&apikey=${key}`))
-                    // .then(movie => movie.json())
-                    
                     <SelectedMovie content={movie}/>
                 })}
             </div>
