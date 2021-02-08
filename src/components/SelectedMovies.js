@@ -7,8 +7,6 @@ class SelectedMovies extends Component {
     
     render() {
 
-        // const filtered_movies = this.props.selectedMovies.filter(movie => movie !== null)
-        // console.log(this.props.selectedMovies)
         return (
             <div>
                 Inside selectedMovies!!!
