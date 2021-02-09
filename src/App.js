@@ -32,7 +32,6 @@ class App extends Component {
           selected_movies: [...this.state.selected_movies, element]
         })
         console.log(this.state.selected_movies)
-        // Rerender NominationList here
         
       }  
     }
