@@ -35,9 +35,6 @@ class App extends Component {
         
       }  
     }
-    // this.state.movies.map(movie => {
-    //   return this.state.selected_movies.push(movie.imdbID === id ? movie.imdbID : null)
-    // })
   }
 
 
