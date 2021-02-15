@@ -4,10 +4,7 @@ const key = "2f7ff25f"
 
 const Movies = () => {
 
-    // state = {
-    //     movies: [],
-    //     query: ""
-    // }
+   
     // const [query, setQuery] = useState("")
     const [movies, getMovies] = useState([])
 
@@ -23,7 +20,7 @@ const Movies = () => {
         fetchMovies(query)
     },[movies])
 
-    // inputHandler = (e) => {
+   
     //     this.setState({
     //         [e.target.name]: e.target.value 
     //     })
