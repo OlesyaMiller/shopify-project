@@ -22,7 +22,6 @@ const Movies = () => {
     useEffect(()=> {
         fetchMovies(query)
     },[movies])
-    // }
 
     // inputHandler = (e) => {
     //     this.setState({
