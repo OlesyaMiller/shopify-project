@@ -18,14 +18,6 @@ const Movies = () => {
         fetchMovies(query)
     },[movies])
 
-   
-    //     this.setState({
-    //         [e.target.name]: e.target.value 
-    //     })
-    // }
-
-        // if (this.state.movies.length === 0) return null
-
         return (
             <div>
                 <form>
