@@ -4,8 +4,6 @@ const key = "2f7ff25f"
 
 const Movies = () => {
 
-   
-    // const [query, setQuery] = useState("")
     const [movies, getMovies] = useState([])
 
     const fetchMovies = (query) => {
