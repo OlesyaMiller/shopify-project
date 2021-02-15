@@ -22,8 +22,6 @@ const Movies = () => {
     useEffect(()=> {
         fetchMovies(query)
     },[movies])
-    // componentDidUpdate(){
-    //     this.fetchMovies(this.state.query)
     // }
 
     // inputHandler = (e) => {
