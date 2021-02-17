@@ -8,21 +8,6 @@ class Search extends Component {
         loading: true 
     }
 
-    // fetchMovies = (query) => {
-    //     fetch(`http://www.omdbapi.com/?s=${query}&type=movie&apikey=${key}`)
-    //     .then(res => {return res.json()})
-    //     .then(data => this.setState({
-    //         movies: data.Search
-    //     }))
-    // }
-
-    // componentDidUpdate(prevProps, prevState){
-    // // shouldComponentUpdate(){   
-    //     if (prevState !== this.state) {
-    //         this.fetchMovies(this.state.query)
-    //     }
-    // }
-
     inputHandler = (e) => {
         this.setState({
             [e.target.name]: e.target.value 
